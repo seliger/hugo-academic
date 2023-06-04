@@ -8,8 +8,8 @@ date: '2019-02-05'
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: black
-  # Choose a code highlighting style (if highlighting enabled in `params.toml`)
-  #   Light style: github. Dark style: dracula (default).
+  # Choose a code highlighting style (see Hugo docs on Chroma)
+  #   Light style: github-light. Dark style: dracula (default).
   highlight_style: dracula
 ---
 
@@ -38,7 +38,7 @@ slides:
 - Speaker notes: `S`
 - Fullscreen: `F`
 - Zoom: `Alt + Click`
-- [PDF Export](https://github.com/hakimel/reveal.js#pdf-export): `E`
+- [PDF Export](https://revealjs.com/pdf-export/)
 
 ---
 
@@ -73,16 +73,16 @@ $$
 Make content appear incrementally
 
 ```
-{{%/* fragment */%}} One {{%/* /fragment */%}}
-{{%/* fragment */%}} **Two** {{%/* /fragment */%}}
-{{%/* fragment */%}} Three {{%/* /fragment */%}}
+{{</* fragment */>}} $\mathbf{y} =  $ {{</* /fragment */>}}
+{{</* fragment */>}} $X\boldsymbol\beta$ {{</* /fragment */>}}
+{{</* fragment */>}} $+ \boldsymbol\varepsilon$ {{</* /fragment */>}}
 ```
 
 Press `Space` to play!
 
-{{% fragment %}} One {{% /fragment %}}
-{{% fragment %}} **Two** {{% /fragment %}}
-{{% fragment %}} Three {{% /fragment %}}
+{{< fragment >}} $\mathbf{y} =  $ {{< /fragment >}}
+{{< fragment >}} $X\boldsymbol\beta$ {{< /fragment >}}
+{{< fragment >}} $+ \boldsymbol\varepsilon$ {{< /fragment >}}
 
 ---
 

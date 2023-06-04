@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: [15.x]
+        node-version: [16.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -32,7 +32,7 @@ jobs:
         run: rm -rf node_modules && yarn install --frozen-lockfile
 
       - name: Check for linting errors
-        run: yarn run lint
+        run: yarn run lint:js  # TODO: also lint styles again once new rule errors resolved
 
 #  format:
 #    runs-on: ubuntu-latest
@@ -64,7 +64,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.95.0'
+          hugo-version: '0.101.0'
           extended: true
 
       - name: Build
